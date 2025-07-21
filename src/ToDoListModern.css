@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(270deg, #a1c4fd, #c2e9fb, #fbc2eb, #f8ffae);
+    background-size: 800% 800%;
+    animation: gradientMove 16s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+.todoContainer {
+    max-width: 520px;
+    margin: 56px auto;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+    padding: 44px 36px 36px 36px;
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', Arial, sans-serif;
+    transition: box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.todoContainer:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.todoInputSection {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 26px;
+    align-items: center;
+}
+
+.todoInput {
+    flex: 1;
+    padding: 13px 18px;
+    border: 1.5px solid #cfd8dc;
+    border-radius: 12px;
+    font-size: 1.08rem;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    background: #f4f7fa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', Arial, sans-serif;
+    color: #000;
+}
+
+.todoInput:focus {
+    border-color: #0078d4;
+    box-shadow: 0 0 0 2px #b3e0ff;
+}
+
+.todoBtn {
+    background: linear-gradient(90deg, #0078d4 60%, #005fa3 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin-left: 8px;
+    font-size: 1.08rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.todoBtn:hover {
+    background: linear-gradient(90deg, #005fa3 60%, #0078d4 100%);
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.addBtn {
+    background: linear-gradient(90deg, #28a745 60%, #218838 100%);
+}
+
+.addBtn:hover {
+    background: linear-gradient(90deg, #218838 60%, #28a745 100%);
+}
+
+.deleteBtn {
+    background: linear-gradient(90deg, #dc3545 60%, #b52a37 100%);
+}
+
+.deleteBtn:hover {
+    background: linear-gradient(90deg, #b52a37 60%, #dc3545 100%);
+}
+
+.upperBtn,
+.upperAllBtn {
+    background: linear-gradient(90deg, #14130d 60%, #44423a 100%);
+    color: #fff;
+}
+
+.upperBtn:hover,
+.upperAllBtn:hover {
+    background: linear-gradient(90deg, #011a1f 60%, #777e7f 100%);
+}
+
+.doneBtn,
+.doneAllBtn {
+    background: linear-gradient(90deg, #17a2b8 60%, #117a8b 100%);
+}
+
+.doneBtn:hover,
+.doneAllBtn:hover {
+    background: linear-gradient(90deg, #258b11 60%, #1ab817 100%);
+}
+
+.divider {
+    margin: 26px 0;
+    border: none;
+    border-top: 2px solid #e0e0e0;
+}
+
+.todoTitle {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #1a237e;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.todoList {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 26px 0;
+}
+
+.todoItem {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1.5px solid #f0f0f0;
+    transition: background 0.2s;
+    border-radius: 10px;
+    margin-bottom: 2px;
+    background: rgba(245, 248, 255, 0.7);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    animation: fadeIn 0.5s;
+}
+
+.todoItem:hover {
+    background: #e3f2fd;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.todoText {
+    flex: 1;
+    font-size: 1.22rem;
+    color: #222;
+    transition: color 0.2s, text-shadow 0.2s;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    font-family: 'Poppins', 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #b0b0b0;
+    text-shadow: none;
+}
+
+.icon {
+    font-size: 1.3em;
+    vertical-align: middle;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+    color: #fff;
+}
+
+.todoBtn:hover .icon {
+    opacity: 1;
+}
+
+.todoActions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    margin-top: 14px;
+}
+
+/* FontAwesome icon support */
+.fa {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-style: normal;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
