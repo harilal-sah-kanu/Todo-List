@@ -29,7 +29,7 @@ A simple ToDo List application built with React and Vite.
 
 ## UI Screenshot
 
-![UI Screenshot](public/ui.png)
+![UI Screenshot](public/image.png)
 
 This project is licensed under the MIT License.
 
